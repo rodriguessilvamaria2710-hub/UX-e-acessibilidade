@@ -1,11 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segurança Digital para Idosos </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segurança Digital para Idosos</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-    
+  <a class="skip-link" href="#main-content">Ir para o conteúdo</a>
+
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">Projeto de UX inclusivo</p>
+      <h1>Segurança Digital para Idosos</h1>
+      <p class="lead">Uma interface clara, com bom contraste, navegação simples e suporte a acessibilidade.</p>
+    </div>
+
+    <div class="toolbar" role="region" aria-label="Controles de acessibilidade">
+      <button id="contrast-toggle" aria-pressed="false">Modo alto contraste</button>
+      <button id="text-size-decrease" aria-label="Diminuir tamanho do texto">A-</button>
+      <button id="text-size-reset" aria-label="Tamanho padrão do texto">A</button>
+      <button id="text-size-increase" aria-label="Aumentar tamanho do texto">A+</button>
+    </div>
+  </header>
+
+  <nav aria-label="Navegação principal" class="main-nav">
+    <ul>
+      <li><a href="#about">Sobre</a></li>
+      <li><a href="#tips">Dicas</a></li>
+      <li><a href="#resources">Recursos</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <section id="about" class="card">
+      <h2>Por que a acessibilidade importa?</h2>
+      <p>Interfaces inclusivas ajudam pessoas idosas, com baixa visão ou dificuldades motoras a entenderem informações de segurança digital e a tomar decisões confiantes.</p>
+    </section>
+
+    <section id="tips" class="card">
+      <h2>Dicas práticas de segurança</h2>
+      <ol>
+        <li>Use senhas fortes e únicas para cada serviço.</li>
+        <li>Verifique remetentes e links antes de clicar.</li>
+        <li>Ative a autenticação em dois fatores sempre que possível.</li>
+        <li>Mantenha o celular e o computador atualizados.</li>
+      </ol>
+    </section>
+
+    <section id="resources" class="card">
+      <h2>Recursos úteis</h2>
+      <ul>
+        <li><a href="https://www.safernet.org.br/" target="_blank" rel="noopener noreferrer">SaferNet Brasil</a></li>
+        <li><a href="https://www.gov.br/pt-br/servicos/" target="_blank" rel="noopener noreferrer">Serviços do Governo</a></li>
+        <li><a href="https://www.serpro.gov.br/" target="_blank" rel="noopener noreferrer">Dicas de segurança em TI</a></li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Fale conosco</h2>
+      <p>Envie sua dúvida ou sugestão. Todas as mensagens são tratadas com atenção e simplicidade.</p>
+      <form id="contact-form">
+        <div class="field-group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+
+        <div class="field-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+
+        <div class="field-group">
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit">Enviar mensagem</button>
+        <div id="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>Desenvolvido com foco em legibilidade, navegação por teclado e contraste adequado.</p>
+  </footer>
 </body>
 </html>
